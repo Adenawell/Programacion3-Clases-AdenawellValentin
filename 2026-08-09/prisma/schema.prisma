@@ -1,0 +1,15 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Tarea {
+  id          Int      @id @default(autoincrement())
+  descripcion String
+  completada  Boolean  @default(false)
+}
